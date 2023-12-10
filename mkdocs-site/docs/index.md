@@ -1,4 +1,4 @@
-# 欢迎造访 Ybr Studio Website
+# 欢迎到访 Ybr Studio Website
 ## 关于我 / *About Me*
 ### 你好呀 / *Hello*
 你好呀，我是**Ybr**，男，现高中生一名。
