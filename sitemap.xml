@@ -2,12 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://YbrStudio.github.io/</loc>
-         <lastmod>2023-12-10</lastmod>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://YbrStudio.github.io/ProgrammingBlog/Python/1_Assignment_and_parameter_passing_in_Python/article/</loc>
-         <lastmod>2023-12-10</lastmod>
+         <loc>https://YbrStudio.github.io/ProgrammingBlog/Python/1_Assignment_and_parameter_passing/article/</loc>
+         <lastmod>2023-12-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://YbrStudio.github.io/ProgrammingBlog/Python/2_What_is_the_same/article/</loc>
+         <lastmod>2023-12-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
