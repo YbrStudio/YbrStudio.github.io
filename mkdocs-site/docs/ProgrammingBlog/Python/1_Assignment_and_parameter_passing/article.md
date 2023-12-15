@@ -6,7 +6,6 @@
 + Python中的赋值是指什么？
 + Python是如何进行参数传递的？
 + Python是如何处理默认参数的？
-+ Python中哪些对象是同一个？
 
 !!! tip "阅读建议"
     阅读难度：较易
@@ -116,10 +115,9 @@ print(node1.data, node2.data)
 {'A': 1, 'B': 2} {'A': 1, 'B': 2}
 ```
 
-## 解析
 以上问题你是否答对了呢？如果没有，让我们一起来看看Python的赋值与传参背后发生了什么。
 
-### 对象与变量
+## 对象与变量
 首先让我们区分两个基本概念：**对象（Object）**与**变量（Variable）**
 
 Python里的**对象（Object）**是保存在计算机**内存**中的有其特定类型（以及属性与方法）的数据（注意这里说的不是“面向对象编程”中的“对象”概念）。
@@ -135,7 +133,7 @@ a = SimpleClass()  # 这行代码在内存中创建了一个类型为`SimpleClas
 ```
 通过上面的代码，相信读者已经能区分对象和变量。
 
-### 赋值
+## 赋值
 让我们先来看两个例子：
 ```Python title="示例1"
 a = []
@@ -200,7 +198,7 @@ print(a, b)
 > 
 这与我们上面的解释与图示是相匹配的。
 
-### 赋值操作的底层实现
+## 赋值操作的底层实现
 !!! tip "阅读建议"
     建议阅读该部分的读者有一定的C/C++语言基础，对于初学者，建议跳过该部分
 
@@ -254,7 +252,7 @@ PyObject* b = a;
 b->append(new PyIntObject(1));
 ```
 
-### 传参
+## 传参
 Python中的参数传递其实和赋值是一样的，是将参数变量指向传入的对象。
 
 考虑文章开头测试一的代码：
@@ -271,7 +269,7 @@ print(lst)
 
 `f(lst)`在进行传参时，实际上是将参数`x`指向了`lst`对应的变量，此时函数`f`中的`x`与全局变量`lst`指向同一个对象，于是在进行`x.append(1)`时，lst的值也会改变。而`x = [1, 2]`将`x`指向了一个新对象`[1, 2]`，而不会改变`lst`。
 
-### 默认参数
+## 默认参数
 Python对于默认参数**只会在函数被构建时构造一个对象**，也就是说当参数取默认值时，多次调用中该参数实际指向同一个对象。
 
 考虑以下代码：
@@ -334,14 +332,14 @@ print(f.__defaults__, id(f.__defaults__[0]))
 
 输出如下：
 ```Console
-[1] 1790079981696
-([1],) 1790079981696
-[1, 2] 1790079981696
-([1, 2],) 1790079981696
-[1, 2, 3] 1790079981696
-([1, 2, 3],) 1790079981696
-[4] 1790080449664
-([1, 2, 3],) 1790080357744
+[1] 1942454262016
+([1],) 1942454262016
+[1, 2] 1942454262016
+([1, 2],) 1942454262016
+[1, 2, 3] 1942454262016
+([1, 2, 3],) 1942454262016
+[4] 1942456041088
+([1, 2, 3],) 1942454262016
 ```
 我们可以看到，`f.__defaults__`的类型是`tuple`，其中保存着函数`f`的默认参数。`f.__defaults__`是一个可写属性，也就是说我们可以使用这种方式来修改一个函数的默认参数（注意，实际工程中**不建议这**样使用）：
 ```Python
@@ -394,12 +392,11 @@ print(p1.items, p2.items)
 !!! quote "作者吐槽"
     真的很不喜欢Python这种默认参数的处理方式，太不pythonic了...
 
-### 实际工程中相关的坑
+## 实际工程中相关的坑
 这里我们看一下开篇测试三和测试四的代码，这是从实际工程的bug案例中精简出的两段原理代码。下面将给出错误写法与导致的bug，请读者自行分析以作为习题，同时将给出正确写法。
 
-#### 测试三
-错误写法：
-```Python
+### 测试三
+```Python title="错误写法"
 class Node:
     def __init__(self, value: int):
         self.value = value
@@ -413,13 +410,13 @@ print(nodes)
 nodes[0].value = 1  # 预计只会改变第0个node，但是所有node都改变了
 print(nodes)
 ```
-输出（未按预期）：
-```Console
+
+```Console title="输出（未按预期）"
 [Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0)]
 [Node(1), Node(1), Node(1), Node(1), Node(1), Node(1), Node(1), Node(1), Node(1), Node(1)]
 ```
-正确写法：
-```Python
+
+```Python title="正确写法"
 class Node:
     def __init__(self, value: int):
         self.value = value
@@ -433,15 +430,14 @@ print(nodes)
 nodes[0].value = 1
 print(nodes)
 ```
-输出（按预期）：
-```Console
+
+```Console title="输出（按预期）"
 [Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0)]
 [Node(1), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0)]
 ```
 
-#### 测试四
-错误写法：
-```Python
+### 测试四
+```Python title="错误写法"
 class Node:
     def __init__(self, data: dict):
         self.data = data
@@ -455,13 +451,13 @@ print(node1.data, node2.data)
 node2.data["B"] = 2  # 预计只改变node2，但是node1也改变了
 print(node1.data, node2.data)
 ```
-输出（未按预期）：
-```Console
+
+```Console title="输出（未按预期）"
 {'A': 1} {'A': 1}
 {'A': 1, 'B': 2} {'A': 1, 'B': 2}
 ```
-正确写法：
-```Python
+
+```Python title="正确写法"
 import copy
 
 class Node:
@@ -477,8 +473,8 @@ print(node1.data, node2.data)
 node2.data["B"] = 2 
 print(node1.data, node2.data)
 ```
-输出（按预期）：
-```Console
+
+```Console title="输出（按预期）"
 {'A': 1} {'A': 1}
 {'A': 1} {'A': 1, 'B': 2}
 ```
