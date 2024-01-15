@@ -1,0 +1,49 @@
+site_name: Ybr Studio Website
+site_url: https://YbrStudio.github.io/
+repo_url: https://github.com/YbrStudio/YbrStudio.github.io
+site_author: Ybr
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  
+theme:
+  name: material
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+
+  palette:
+    primary: black
+    scheme: slate
+
+nav:
+  - 主页: index.md
+  - 技术博客:
+    - Python:
+      - Python中的赋值与传参，你真的了解吗？: ProgrammingBlog/Python/Assignment_and_parameter_passing/article.md
+      - 在Python中，什么是相同的？: ProgrammingBlog/Python/What_is_the_same/article.md
+    - Cyan语言:
+      - 什么是Cyan语言？: ProgrammingBlog/Cyan/general.md
+      - Cyan的类型系统: ProgrammingBlog/Cyan/TypingSystem/article.md
+    - 学习笔记:
+      - Unicode字符集、常见支持Unicode的编码与不同编程语言使用的编码策略: ProgrammingBlog/LearningNotes/Encoding/article.md
+  - 随笔:
+    - 回望2023的脚步，踏上2024的旅程: Essay/2023to2024/article.md
