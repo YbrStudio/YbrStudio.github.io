@@ -3,19 +3,33 @@ site_url: https://YbrStudio.github.io/
 repo_url: https://github.com/YbrStudio/YbrStudio.github.io/
 site_author: Ybr
 
-markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
+markdown_extensions:  # see more at https://squidfunk.github.io/mkdocs-material/reference/
+  - admonition  # 提示块
+  - pymdownx.superfences  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences
+  - attr_list  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists
+  - md_in_html  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
 
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  - footnotes
+
   
 theme:
   name: material
   icon:
+    # 提示块
     admonition:
       note: octicons/tag-16
       abstract: octicons/checklist-16
@@ -29,6 +43,21 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
+
+    annotation: material/plus-circle-outline
+    
+  features:
+    - content.code.copy
+    - content.code.annotate
+    # - content.tabs.link  # 标签联动
+
+    - navigation.instant  # 点击内部链接时，不用全部刷新页面
+    - navigation.tracking  # 在url中使用标题定位锚点
+    - navigation.tabs  # 顶部显示导航顶层nav（也就是第一个节点）
+    - navigation.tabs.sticky   # 滚动时隐藏顶部nav，需要配合navigation.tabs使用
+    # - navigation.expand  # 不折叠左侧nav节点
+    # - toc.integrate  # 隐藏右侧目录
+    - navigation.top  # 一键回顶部
 
   palette:
     primary: black

@@ -1,4 +1,10 @@
+---
+title: 主页
+icon: octicons/home-24
+---
+
 # 欢迎到访 Ybr Studio Website
+
 ## 关于我 / *About Me*
 ### 你好呀 / *Hello*
 你好呀，我是**Ybr**，男，现高中生一名。
@@ -21,4 +27,4 @@ Bilibili: <a href="https://space.bilibili.com/1369096401/" target="_blank">YbrSt
 本站是我的个人网页，会不定期（真的非常不定期）更新一些**个人随笔**、**编程技术文章**以及**个人项目文档**。
 
 !!! note "著作权声明 ©"
-    本站所有内容（除有特殊标注外）均遵循<a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank">CC-BY-ND-4.0</a>协议（署名-禁止演绎，保留原作者姓名即可个人使用或商用，但是不能改编原作与他人分享）。使用时不得违反法律或公序良俗，或有攻击他人等造成不良影响的行为。
+    **本站所有内容（除有特殊标注外）**均遵循<a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank">CC-BY-ND-4.0</a>协议（署名-禁止演绎，保留原作者姓名即可个人使用或商用，但是不能改编原作与他人分享）。使用时不得违反法律或公序良俗，或有攻击他人等造成不良影响的行为。
