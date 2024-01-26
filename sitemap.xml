@@ -2,37 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://YbrStudio.github.io/</loc>
-         <lastmod>2024-01-16</lastmod>
+         <lastmod>2024-01-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://YbrStudio.github.io/Essay/2023to2024/article/</loc>
-         <lastmod>2024-01-16</lastmod>
+         <loc>https://YbrStudio.github.io/blog/cpp/ret_based_overload/</loc>
+         <lastmod>2024-01-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://YbrStudio.github.io/ProgrammingBlog/Cyan/general/</loc>
-         <lastmod>2024-01-16</lastmod>
+         <loc>https://YbrStudio.github.io/blog/cyan/STV/</loc>
+         <lastmod>2024-01-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://YbrStudio.github.io/ProgrammingBlog/Cyan/TypingSystem/article/</loc>
-         <lastmod>2024-01-16</lastmod>
+         <loc>https://YbrStudio.github.io/blog/cyan/builtin_types/</loc>
+         <lastmod>2024-01-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://YbrStudio.github.io/ProgrammingBlog/LearningNotes/Encoding/article/</loc>
-         <lastmod>2024-01-16</lastmod>
+         <loc>https://YbrStudio.github.io/blog/cyan/general/</loc>
+         <lastmod>2024-01-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://YbrStudio.github.io/ProgrammingBlog/Python/Assignment_and_parameter_passing/article/</loc>
-         <lastmod>2024-01-16</lastmod>
+         <loc>https://YbrStudio.github.io/blog/cyan/type_compatibility/</loc>
+         <lastmod>2024-01-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://YbrStudio.github.io/ProgrammingBlog/Python/What_is_the_same/article/</loc>
-         <lastmod>2024-01-16</lastmod>
+         <loc>https://YbrStudio.github.io/blog/learning_notes/string_encoding/</loc>
+         <lastmod>2024-01-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://YbrStudio.github.io/blog/python/assignment_and_parameter_passing/article/</loc>
+         <lastmod>2024-01-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://YbrStudio.github.io/blog/python/what_is_same/article/</loc>
+         <lastmod>2024-01-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://YbrStudio.github.io/essay/2023to2024/</loc>
+         <lastmod>2024-01-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
