@@ -89,7 +89,7 @@ int main() {
 }
 ```
 
-```Console title="输出"
+```output title="输出"
 6
 �
 你

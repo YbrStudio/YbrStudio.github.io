@@ -23,7 +23,12 @@ markdown_extensions:  # see more at https://squidfunk.github.io/mkdocs-material/
   - pymdownx.tabbed:
       alternate_style: true
 
-  - footnotes
+  # https://squidfunk.github.io/mkdocs-material/reference/formatting/
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
 
   
 theme:
@@ -51,7 +56,7 @@ theme:
     - content.code.annotate
     # - content.tabs.link  # 标签联动
 
-    - navigation.instant  # 点击内部链接时，不用全部刷新页面
+    # - navigation.instant  # 点击内部链接时，不用全部刷新页面
     - navigation.tracking  # 在url中使用标题定位锚点
     - navigation.tabs  # 顶部显示导航顶层nav（也就是第一个节点）
     - navigation.tabs.sticky   # 滚动时隐藏顶部nav，需要配合navigation.tabs使用
@@ -63,16 +68,24 @@ theme:
     primary: black
     scheme: slate
 
+
+
+
+
+
 nav:
   - 主页: index.md
   - 技术博客:
+    - C++:
+      - C++黑魔法之基于返回值的函数重载: blog/cpp/ret_based_overload.md
     - Python:
-      - Python中的赋值与传参，你真的了解吗？: ProgrammingBlog/Python/Assignment_and_parameter_passing/article.md
-      - 在Python中，什么是相同的？: ProgrammingBlog/Python/What_is_the_same/article.md
+      - Python中的赋值与传参，你真的了解吗？: blog/python/assignment_and_parameter_passing/article.md
     - Cyan语言:
-      - 什么是Cyan语言？: ProgrammingBlog/Cyan/general.md
-      - Cyan的类型系统: ProgrammingBlog/Cyan/TypingSystem/article.md
+      - 什么是Cyan语言？: blog/cyan/general.md
+      - 静态类型变量: blog/cyan/STV.md
+      - 内置类型: blog/cyan/builtin_types.md
+      - 类型兼容性: blog/cyan/type_compatibility.md
     - 学习笔记:
-      - Unicode字符集、常见的编码与不同编程语言使用的编码策略: ProgrammingBlog/LearningNotes/Encoding/article.md
+      - Unicode字符集、常见的编码与不同编程语言使用的编码策略: blog/learning_notes/string_encoding.md
   - 随笔:
-    - 回望2023的脚步，踏上2024的旅程: Essay/2023to2024/article.md
+    - 回望2023的脚步，踏上2024的旅程: essay/2023to2024.md

@@ -69,7 +69,7 @@ p2.items.append("apple")  # 预计只改变p2，但p1也改变了
 print(p1.items, p2.items)
 ```
 输出：
-```Console
+```output
 ['sword', 'apple'] ['sword', 'apple']
 ```
 
@@ -89,7 +89,7 @@ nodes[0].value = 1  # 预计只会改变第0个node，但是所有node都改变�
 print(nodes)
 ```
 输出：
-```Console
+```output
 [Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0)]
 [Node(1), Node(1), Node(1), Node(1), Node(1), Node(1), Node(1), Node(1), Node(1), Node(1)]
 ```
@@ -110,7 +110,7 @@ node2.data["B"] = 2  # 预计只改变node2，但是node1也改变了
 print(node1.data, node2.data)
 ```
 输出：
-```Console
+```output
 {'A': 1} {'A': 1}
 {'A': 1, 'B': 2} {'A': 1, 'B': 2}
 ```
@@ -157,24 +157,24 @@ print(a, b)
 `a = []`这行代码在内存中创建了一个`[]`对象，并将其赋值给了变量`a`。在Python中，将对象赋值给变量是指**将该变量作为对象的一个指针（标签）**（有C/C++语言基础的读者理解为`PyObject*`，即指针即可）。于是，上面那行代码就相当于进行了如下操作：
 
 先在内存中创建一个`[]`对象
-![图示1](Images/img1.png)
+![图示1](images/img1.png)
 
 将变量`a`指向`[]`对象（给`[]`对象贴上标签`a`）
-![图示1](Images/img2.png)
+![图示1](images/img2.png)
 
 `b = a`这行代码**将变量`b`指向变量`a`指向的对象**，相当于如下操作：
-![图示1](Images/img3.png)
+![图示1](images/img3.png)
 
 接下来，在第一段代码的`b = [1]`中，**创建了一个新的对象`[1]`, 并将变量`b`重新指向了这个新对象**。图示如下：
-![图示1](Images/img4.png)
+![图示1](images/img4.png)
 所以第一段代码，`print(a, b)`分别输出变量`a`和变量`b`对应的对象，结果为`[] [1]`
 
 在第二段代码的`b.append(1)`中，**向变量`b`指向的列表对象中添加了一个元素`1`**，要注意的是这个操作没有改变变量`b`指向的对象，`a`与`b`仍指向同一个对象。图示如下：
-![图示1](Images/img5.png)
+![图示1](images/img5.png)
 这就解释了为什么看似只改变了变量`b`，但变量`a`也随之改变了。
 
 
-在Python中，使用`id(obj)`函数可以获取该对象唯一的整数标识。对于“同一个对象”（注意，“同一个”是指在内存里的位置相同，而非值相同），对它们取`id()`返回值也是相同的；反之，返回值则不同。Python的`is`关键字用于比较两个对象是否完全相同（在大多数情况下等同于比较`id()`结果是否相同，至于为什么说“在大多数情况下”详见[在Python中，什么是相同的？](../What_is_the_same/article.md)）。我们可以借助`id()`和`is`来协助理解以上过程。
+在Python中，使用`id(obj)`函数可以获取该对象唯一的整数标识。对于“同一个对象”（注意，“同一个”是指在内存里的位置相同，而非值相同），对它们取`id()`返回值也是相同的；反之，返回值则不同。Python的`is`关键字用于比较两个对象是否完全相同（在大多数情况下等同于比较`id()`结果是否相同，至于为什么说“在大多数情况下”详见[在Python中，什么是相同的？](../what_is_same/article.md)）。我们可以借助`id()`和`is`来协助理解以上过程。
 
 ```Python
 a = []
@@ -189,7 +189,7 @@ print(a, b)
 ```
 
 输出结果：
-```Console
+```output
 2961998796928 2961998796928 True
 2961998796928 2961998795008 False
 [] [1]
@@ -285,7 +285,7 @@ f(3)
 f(4, [])
 ```
 这段代码的输出是：
-```Console
+```output
 [1]
 [1, 2]
 [1, 2, 3]
@@ -307,7 +307,7 @@ f(3)
 f(4, [])
 ```
 输出如下：
-```Console
+```output
 [1] 2601386432640
 [1, 2] 2601386432640
 [1, 2, 3] 2601386432640
@@ -332,7 +332,7 @@ print(f.__defaults__, id(f.__defaults__[0]))
 ```
 
 输出如下：
-```Console
+```output
 [1] 1942454262016
 ([1],) 1942454262016
 [1, 2] 1942454262016
@@ -352,7 +352,7 @@ f.__defaults__ = ([1], )
 f()
 ```
 输出如下：
-```Console
+```output
 []
 [1]
 ```
@@ -369,7 +369,7 @@ p2.items.append("apple")  # 预计只改变p2，但p1也改变了
 print(p1.items, p2.items)
 ```
 输出：
-```Console
+```output
 ['sword', 'apple'] ['sword', 'apple']
 ```
 相信读者已经能发现并理解问题所在。
@@ -386,7 +386,7 @@ p2.items.append("apple")
 print(p1.items, p2.items)
 ```
 输出如下：
-```Console
+```output
 ['sword'] ['sword', 'apple']
 ```
 
@@ -412,7 +412,7 @@ nodes[0].value = 1  # 预计只会改变第0个node，但是所有node都改变�
 print(nodes)
 ```
 
-```Console title="输出（未按预期）"
+```output title="输出（未按预期）"
 [Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0)]
 [Node(1), Node(1), Node(1), Node(1), Node(1), Node(1), Node(1), Node(1), Node(1), Node(1)]
 ```
@@ -432,7 +432,7 @@ nodes[0].value = 1
 print(nodes)
 ```
 
-```Console title="输出（按预期）"
+```output title="输出（按预期）"
 [Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0)]
 [Node(1), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0), Node(0)]
 ```
@@ -453,7 +453,7 @@ node2.data["B"] = 2  # 预计只改变node2，但是node1也改变了
 print(node1.data, node2.data)
 ```
 
-```Console title="输出（未按预期）"
+```output title="输出（未按预期）"
 {'A': 1} {'A': 1}
 {'A': 1, 'B': 2} {'A': 1, 'B': 2}
 ```
@@ -475,7 +475,7 @@ node2.data["B"] = 2
 print(node1.data, node2.data)
 ```
 
-```Console title="输出（按预期）"
+```output title="输出（按预期）"
 {'A': 1} {'A': 1}
 {'A': 1} {'A': 1, 'B': 2}
 ```
