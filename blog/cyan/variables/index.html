@@ -10,13 +10,13 @@
         <meta name="author" content="Ybr">
       
       
-        <link rel="canonical" href="https://YbrStudio.github.io/blog/cyan/builtin_types/">
+        <link rel="canonical" href="https://YbrStudio.github.io/blog/cyan/variables/">
       
       
-        <link rel="prev" href="../STV/">
+        <link rel="prev" href="../general/">
       
       
-        <link rel="next" href="../type_compatibility/">
+        <link rel="next" href="../../learning_notes/string_encoding/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>内置类型 - Ybr Studio Website</title>
+        <title>变量 - Ybr Studio Website</title>
       
     
     
@@ -157,7 +157,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              内置类型
+              变量
             
           </span>
         </div>
@@ -606,27 +606,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../STV/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    静态类型变量
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -643,7 +622,7 @@
           
   
   <span class="md-ellipsis">
-    内置类型
+    变量
   </span>
   
 
@@ -654,7 +633,7 @@
         
   
   <span class="md-ellipsis">
-    内置类型
+    变量
   </span>
   
 
@@ -678,17 +657,17 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      数字类型
+      静态类型变量
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="数字类型">
+    <nav class="md-nav" aria-label="静态类型变量">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      整数类型
+      定义
     </span>
   </a>
   
@@ -697,7 +676,7 @@
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      浮点数类型
+      可变与不可变性
     </span>
   </a>
   
@@ -706,7 +685,7 @@
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      整数和浮点数的转换
+      赋值
     </span>
   </a>
   
@@ -715,7 +694,7 @@
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      不合法的数字运算
+      类型推导
     </span>
   </a>
   
@@ -729,7 +708,64 @@
         <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      字符串类型
+      动态类型变量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="动态类型变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      动态特性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      常量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      编译期类型与运行时类型
     </span>
   </a>
   
@@ -739,27 +775,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../type_compatibility/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    类型兼容性
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -826,6 +841,93 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Modern C++
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Modern C++
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning_notes/modern_cpp/rvalueref_move_prefectforwarding.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    右值引用、移动语句和完美转发
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning_notes/modern_cpp/type_deduction.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    类型推导
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -943,17 +1045,17 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      数字类型
+      静态类型变量
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="数字类型">
+    <nav class="md-nav" aria-label="静态类型变量">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      整数类型
+      定义
     </span>
   </a>
   
@@ -962,7 +1064,7 @@
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      浮点数类型
+      可变与不可变性
     </span>
   </a>
   
@@ -971,7 +1073,7 @@
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      整数和浮点数的转换
+      赋值
     </span>
   </a>
   
@@ -980,7 +1082,7 @@
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      不合法的数字运算
+      类型推导
     </span>
   </a>
   
@@ -994,7 +1096,64 @@
         <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
-      字符串类型
+      动态类型变量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="动态类型变量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      动态特性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      常量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      编译期类型与运行时类型
     </span>
   </a>
   
@@ -1018,93 +1177,157 @@
   
 
 
-<h1 id="_1">内置类型</h1>
-<p>Cyan语言提供了许多的<strong>内置类型（Builtin Type）</strong>，可以大致分为以下三类：</p>
+<h1 id="_1">类型系统</h1>
+<p>类型系统是一门编程语言的基础，本文将介绍Cyan中的类型系统。</p>
+<h2 id="_2">静态类型变量</h2>
+<p><strong>静态类型变量（Static Type Variables）</strong>是必须在编译期确定其类型，并且只能保存该类型或该类型的子类型的对象的变量。</p>
+<h3 id="_3">定义</h3>
+<p>使用<code>let</code>关键字来定义静态类型变量。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><mark class="critic">let</mark> a: int = 42;
+</span></code></pre></div>
+可以看到，变量定义由以下几部分构成：</p>
 <ul>
-<li><strong>基本类型</strong><ul>
-<li><code>int</code> 整数类型</li>
-<li><code>float</code> 浮点数类型</li>
-<li><code>str</code> 字符串类型</li>
-<li><code>bool</code> 布尔类型</li>
+<li>变量定义关键字（此处为<code>let</code>）</li>
+<li>变量名称</li>
+<li>类型标注（Type Annotation）</li>
+<li>初始化表达式</li>
 </ul>
-</li>
-<li><strong>容器类型</strong><ul>
-<li><code>tuple</code> 元组类型</li>
-<li><code>list</code> 列表类型</li>
-<li><code>dict</code> 字典类型</li>
-<li><code>set</code> 集合类型</li>
-</ul>
-</li>
-<li><strong>枚举类型</strong><ul>
-<li><code>Optional</code> 可选类型</li>
-<li><code>Result</code> 结果类型</li>
-</ul>
-</li>
-</ul>
-<h2 id="_2">数字类型</h2>
-<h3 id="_3">整数类型</h3>
-<p>Cyan语言中的整数正常情况下底层使用<code>long long</code>实现，在64位系统上表达范围为<code>[-2^63, 2^63-1]</code>。一旦在编译时发现了超出这个范围的常量，或者在运行时运算结果出现了溢出，Cyan会自动将该<code>int</code>对象转换为高精度实现。转换为高精度的实现后数据表达范围理论上将没有限制。总的来说，<strong>Cyan中的整数类型的表达范围没有限制</strong>。
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>let a: int = 2 ** 128;  // OK
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>let b: int = 2 ** 128 + 1;  // OK
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>let c: int = a * b;  // OK
+<p>一条变量定义语句可以包含多个变量，用<code>,</code>分隔。例如：
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>let a: int = 42, b: int = 43;
 </span></code></pre></div></p>
-<h3 id="_4">浮点数类型</h3>
-<p class="annotate">Cyan语言中浮点数使用<code>double</code>实现，并且没有类似<code>int</code>的高精度支持，这导致<strong>浮点数的表达范围是有限的</strong>（与<code>C/C++</code>中<code>double</code>相同）。当浮点数在编译期溢出(1)时，会引发编译错误；而当运行期溢出时，会返回<code>inf</code>或<code>-inf</code>，并抛出一个警告。</p>
-<ol>
-<li>编译期溢出是指编译期能确定的常量表达式中出现的浮点数运算结果溢出的情况。例如<code>let a = 2.0 ** 1024;</code></li>
-</ol>
-<!-- 让我借用一下C的代码块，不然inline-annotation识别不到 -->
-<div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">let</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">1024</span><span class="p">;</span><span class="w">  </span><span class="c1">// 编译错误</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">let</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">1023</span><span class="p">;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">let</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// (1) 警告：发生了浮点数运算溢出，结果为`inf`</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">print</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w">  </span><span class="c1">// inf</span>
-</span></code></pre></div>
-<ol>
-<li>如果在编译时开启了<strong>极限常量优化</strong>，编译器会自动检测到<code>b</code>的值与外界输入无关，所以在编译期将<code>b * 2</code>展开为<code>2.0 ** 1024</code>，导致结果并非是运行时警告，而是编译错误。</li>
-</ol>
-<h3 id="_5">整数和浮点数的转换</h3>
-<p class="annotate">在<a href="../STV/">静态类型变量</a>中我们提到，静态类型变量只能保存一种类型的对象。但<code>float</code>类型的静态类型变量可以保存<code>int</code>类型的对象，反之不能 (1)。如果要将<code>float</code>对象赋值给<code>int</code>类型的静态类型变量，需要使用<code>as</code>关键字进行类型转换。同时要注意的是，当<code>int</code>对象被赋值给<code>float</code>类型的静态类型变量时，该类型实际储存的对象的类型仍是<code>int</code>，这个过程中没有新对象产生。</p>
-<ol>
-<li>之所以允许<code>float</code>类型的静态类型变量保存<code>int</code>类型的对象，是因为<code>float</code>类型兼容<code>int</code>类型，详见<a href="../type_compatibility/">类型兼容性</a>。</li>
-</ol>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>let mut a: int = 42;
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>let mut b: float = 3.14;
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>b = a;  // OK
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>a = b;  // 编译错误
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>a = b as int;  // OK
-</span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>let mut a: int = 42;
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>let mut b: float = 3.14;
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>b = a;
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>print(typeof(b));  // int
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>print(a is b);  // true
-</span></code></pre></div>
-<h3 id="_6">不合法的数字运算</h3>
-<p>在Cyan语言中，当出现了数学上不合法的运算时，会产生错误<code>MathError</code>，无论是在编译期还是运行期。</p>
-<!-- 让我借用一下C的代码块，不然inline-annotation识别不到 -->
-<div class="language-c highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">from</span><span class="w"> </span><span class="n">math</span><span class="w"> </span><span class="n">import</span><span class="w"> </span><span class="n">sqrt</span><span class="p">;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">let</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 编译错误</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">let</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">let</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">  </span><span class="c1">// 运行时错误 (1)</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">let</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="mi">-1</span><span class="p">);</span><span class="w">  </span><span class="c1">// 运行时错误</span>
-</span></code></pre></div>
-<ol>
-<li>假设没有开启极限常量优化</li>
-</ol>
-<h2 id="_7">字符串类型</h2>
-<p>Cyan中的字符串完全支持Unicode字符集。底层根据字符串内容自动选择<code>Latin-1</code>、<code>UCS-2</code>或<code>UCS-4</code>编码。</p>
-<p>字符串支持Unicode字符的<code>O(1)</code>级别随机访问和长度获取。此外还支持切片、负数索引等操作。
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>let string: str = &quot;Hello,世界🌏&quot;;
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>print(len(string));  // 9
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>print(string[6]);  // 你
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>print(string[6:8]);  // 世界
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>print(string[-1]);  // 🌏
+<h3 id="_4">可变与不可变性</h3>
+<p>默认情况下，静态类型变量是<strong>不可变的（Immutable）</strong>，也就是说，一旦定义了变量，就不能再对其赋值。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>let a: int = 42;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>a = 43;  // 编译错误
 </span></code></pre></div></p>
+<p>如果想要将变量定义为<strong>可变的（Mutable）</strong>，可以在变量定义语句中添加<code>mut</code>关键字。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>let <mark class="critic">mut</mark> a: int = 42;
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>a = 43;  // OK
+</span></code></pre></div>
+注意，语义上<code>mut a</code>是一个整体，也就是说一条变量定义语句可以同时定义可变变量和不可变变量。</p>
+<h3 id="_5">赋值</h3>
+<p>静态类型变量只能保存一个特定类型或其子类型的对象，尝试将其他类型的对象赋值会报错。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>let mut a: int = 42;
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>a = &quot;43&quot;;  // 编译错误
+</span></code></pre></div></p>
+<p>如果要将一个有多个可能的类型的对象赋值给静态类型变量，直接赋值会导致编译错误，可使用<code>'</code>（类型保证符）来向编译器说明开发者保证该对象在运行时的类型一定符合变量的类型。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>fn foo() -&gt; int | str {
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    if input() == &quot;A&quot; {
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        return 42;
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    } else {
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        return &quot;42&quot;;
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    }
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>}
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>let mut a: int;
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>a = foo();  // 编译错误
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>a = foo()<mark class="critic">&#39;</mark>;  // 由开发者保证此处`foo()`返回的类型一定为`int`，通过编译
+</span></code></pre></div></p>
+<p>注意，如果将一个类型不可能是某静态类型变量对应的类型或其子类型的对象赋值给该变量，无论是否添加<code>'</code>，都会报错。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>fn foo() -&gt; int | str {
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    if input() == &quot;A&quot; {
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>        return 42;
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    } else {
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        return &quot;42&quot;;
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    }
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>}
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>let a: bool = foo();  // 编译错误
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>let b: bool = foo()&#39;;  // 编译错误
+</span></code></pre></div></p>
+<p>如果一个变量在使用时从未被赋值过（定义时也未被初始化），则会报错。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>let a: int;
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>print(a);  // 运行时错误
+</span></code></pre></div></p>
+<h3 id="_6">类型推导</h3>
+<p>在变量定义语句中，<strong>如果变量有初始化表达式</strong>，则可以自动进行<strong>类型推导</strong>，无需显式进行类型标注。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>let a = 42;  // 自动推导出类型为int
+</span></code></pre></div></p>
+<p>类型推导的结果是初始化表达式的类型，如果初始化表达式有多个可能的类型，则会出现编译错误。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>fn foo() -&gt; int | str {
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    if input() == &quot;A&quot; {
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>        return 42;
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    } else {
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        return &quot;42&quot;;
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    }
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>}
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>let a = foo();  // 编译错误
+</span></code></pre></div></p>
+<h2 id="_7">动态类型变量</h2>
+<p><strong>动态类型变量（Dynamic Type Variables）</strong>是可以先后保存类型互不兼容的对象的变量。</p>
+<h3 id="_8">定义</h3>
+<p>使用<code>var</code>关键字来定义动态类型变量。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><mark class="critic">var</mark> a = 42;
+</span></code></pre></div></p>
+<p>由于动态类型变量自身的特性，无需使用<code>mut</code>关键字来声明可变性（如果使用会报错）。</p>
+<h3 id="_9">动态特性</h3>
+<p>动态类型变量提供了灵活的动态类型支持，默认情况下动态类型变量可以保存任何类型的对象。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>var a = 42;
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>a = &quot;Hello World&quot;;  // OK
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>a = true;  // OK
+</span></code></pre></div></p>
+<p>如果想要限制动态类型变量的类型，可以在定义变量时使用<strong>类型标注</strong>。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>var a: int | str = 42;
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>a = &quot;Hello World&quot;;  // OK
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>a = true;  // 编译错误
+</span></code></pre></div></p>
+<p>Cyan编译器会追踪动态类型变量在被使用位置的可能类型，并检查与使用要求的类型是否兼容。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>var a: int | bool = false;
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>if input() == &quot;A&quot; {
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    a = 1;
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    print(a * 2);  // 此处`a`的类型被追踪为`int`，OK
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>}
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>print(a * 2);  // 此处`a`的类型被追踪为`int | bool`，编译错误
+</span></code></pre></div></p>
+<p>如果保证一个可能有多个类型的变量在某处被使用时一定合法，可使用<code>'</code>（类型保证符）来向编译器说明开发者保证该对象在运行时的类型一定符合变量的类型。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>var a: int | bool = false;
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>if input() == &quot;A&quot; {
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    a = 1;
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>}
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>print(a<mark class="critic">&#39;</mark> * 2);  // OK
+</span></code></pre></div></p>
+<h2 id="_10">常量</h2>
+<p><strong>常量（Constant）</strong>是必须在编译期确定其值，且在运行时不能被修改的变量。</p>
+<h3 id="_11">定义</h3>
+<p>使用<code>const</code>关键字来定义常量。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><mark class="critic">const</mark> a: int = 42;
+</span></code></pre></div></p>
+<p>常量定义时必须有初始化表达式，同时可省略类型标注。</p>
+<p>常量不能被赋值，这与不可变的静态类型变量类似。但不同的是，常量的值必须在编译期确定，而静态类型变量的值在运行时确定。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>const a = 1;
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>a = 2;  // 编译错误
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>let b = input();  // OK
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>const c = input();  // 编译错误，`input()`的返回值不能在编译期确定
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>const fn foo() -&gt; int {
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    return 42;
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>}
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>const d = foo();  // OK
+</span></code></pre></div></p>
+<h2 id="_12">编译期类型与运行时类型</h2>
+<p>Cyan中的三种变量均已介绍完毕，接下来有必要辨析<strong>编译期类型（Compile-Time Type）</strong>和<strong>运行时类型（Runtime Type）</strong>的区别。</p>
+<p>编译期类型是指在编译阶段，用于进行类型检查、类型约束的类型，而运行时类型是指在运行时变量的实际类型。考虑以下代码：
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>let a: object = 42;
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>let b: int = a;
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>let c: float = b;
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>print(typeof(a), typeof(b), typeof(c));  // 输出：int int int
+</span></code></pre></div></p>
+<p>其中变量<code>a</code> <code>b</code> <code>c</code>的类型标注<code>object</code> <code>int</code> <code>float</code>就属于编译期类型，而变量<code>a</code> <code>b</code> <code>c</code>的运行时实际类型<code>int</code>属于运行时类型。</p>
+<p>一般情况下，编译期类型与运行时类型相同，或者<strong>兼容</strong>运行时类型而不相同，我们称这种情况为<strong>类型正确</strong>，反之，则称之为<strong>类型异常</strong>。类型异常可能在使用了类型保证符，但实际上并没有保证类型的正确性的情况下出现，例如：
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>var a: int | bool = false;
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>if input() == &quot;A&quot; {
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    a = 1;
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>}
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>let b: int = a&#39;;
+</span></code></pre></div>
+以上代码可以通过编译，但是如果开发者为能保证输入一定是<code>"A"</code>，则会导致</p>
 
 
 
