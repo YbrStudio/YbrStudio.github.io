@@ -16,7 +16,7 @@
         <link rel="prev" href="../../../cpp/ret_based_overload/">
       
       
-        <link rel="next" href="../../../cyan/general/">
+        <link rel="next" href="../../../learning_notes/string_encoding/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -712,7 +712,7 @@
             
   
   <span class="md-ellipsis">
-    Cyan语言
+    学习笔记
   </span>
   
 
@@ -721,93 +721,6 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
-            <span class="md-nav__icon md-icon"></span>
-            Cyan语言
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cyan/general/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    什么是Cyan语言？
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../cyan/variables/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    变量
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    学习笔记
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             学习笔记
           </label>
@@ -829,93 +742,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Modern C++
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_2">
-            <span class="md-nav__icon md-icon"></span>
-            Modern C++
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../learning_notes/modern_cpp/rvalueref_move_prefectforwarding.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    右值引用、移动语句和完美转发
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../learning_notes/modern_cpp/type_deduction.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    类型推导
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -1294,7 +1120,7 @@ Python里的<strong>变量（Variable）</strong>是用来标识对象的名字�
 <p>在第二段代码的<code>b.append(1)</code>中，<strong>向变量<code>b</code>指向的列表对象中添加了一个元素<code>1</code></strong>，要注意的是这个操作没有改变变量<code>b</code>指向的对象，<code>a</code>与<code>b</code>仍指向同一个对象。图示如下：
 <img alt="图示1" src="../images/img5.png" />
 这就解释了为什么看似只改变了变量<code>b</code>，但变量<code>a</code>也随之改变了。</p>
-<p>在Python中，使用<code>id(obj)</code>函数可以获取该对象唯一的整数标识。对于“同一个对象”（注意，“同一个”是指在内存里的位置相同，而非值相同），对它们取<code>id()</code>返回值也是相同的；反之，返回值则不同。Python的<code>is</code>关键字用于比较两个对象是否完全相同（在大多数情况下等同于比较<code>id()</code>结果是否相同，至于为什么说“在大多数情况下”详见<a href="../../what_is_same/article/">在Python中，什么是相同的？</a>）。我们可以借助<code>id()</code>和<code>is</code>来协助理解以上过程。</p>
+<p>在Python中，使用<code>id(obj)</code>函数可以获取该对象唯一的整数标识。对于“同一个对象”（注意，“同一个”是指在内存里的位置相同，而非值相同），对它们取<code>id()</code>返回值也是相同的；反之，返回值则不同。Python的<code>is</code>关键字用于比较两个对象是否完全相同（在大多数情况下等同于比较<code>id()</code>结果是否相同）。我们可以借助<code>id()</code>和<code>is</code>来协助理解以上过程。</p>
 <div class="language-Python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
@@ -1437,7 +1263,7 @@ Python里的<strong>变量（Variable）</strong>是用来标识对象的名字�
 </span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="go">[4] 1942456041088</span>
 </span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="go">([1, 2, 3],) 1942454262016</span>
 </span></code></pre></div>
-我们可以看到，<code>f.__defaults__</code>的类型是<code>tuple</code>，其中保存着函数<code>f</code>的默认参数。<code>f.__defaults__</code>是一个可写属性，也就是说我们可以使用这种方式来修改一个函数的默认参数（注意，实际工程中<strong>不建议这</strong>样使用）：
+我们可以看到，<code>f.__defaults__</code>的类型是<code>tuple</code>，其中保存着函数<code>f</code>的默认参数。<code>f.__defaults__</code>是一个可写属性，也就是说我们可以使用这种方式来修改一个函数的默认参数（注意，实际工程中<strong>不建议</strong>这样使用）：
 <div class="language-Python highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="p">[]):</span>
 </span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>
@@ -1609,6 +1435,10 @@ Python里的<strong>变量（Variable）</strong>是用来标识对象的名字�
     
     
       <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>
